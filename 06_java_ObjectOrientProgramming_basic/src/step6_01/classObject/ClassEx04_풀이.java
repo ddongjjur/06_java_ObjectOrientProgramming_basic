@@ -3,7 +3,7 @@ package step6_01.classObject;
 import java.util.Random;
 import java.util.Scanner;
 
-//2022-10-25 오후 5시 21분 ~ 오후 5시 
+//2022-10-25 오후 5시 21분 ~ 오후 5시 50분
 
 /*
 class Ex04 {
@@ -137,7 +137,7 @@ public class ClassEx04_풀이 {
 			}
 		}
 		System.out.println("1등 학생: " + bestStudent + " 점수: " + bestScore);
-		
+		scan.close();
 	}
 
 }
