@@ -3,7 +3,7 @@ package step6_01.classObject;
 import java.util.Random;
 import java.util.Scanner;
 
-//2022-10-25 오후 5시 21분 ~
+//2022-10-25 오후 5시 21분 ~ 오후 5시 
 
 /*
 class Ex04 {
@@ -111,18 +111,19 @@ public class ClassEx04_풀이 {
 				System.out.println();
 			}
 			
+		}
+		if (inputHakbun < e.hakbuns[0] || inputHakbun > e.hakbuns[e.hakbuns.length -1]) {
+			System.out.println("해당 학번은 존재하지 않습니다.");
+		}
+		System.out.println();
 			
-		
 		// 문제7) 학번을 입력받아 성적 출력
 		// 		단, 없는학번 입력 시 예외처리
 		// 예   7)
 		// 학번 입력 : 1002		성적 : 11점
 		// 학번 입력 : 1000		해당학번은 존재하지 않습니다.
-			else {
-				System.out.println("해당 학번은 존재하지 않습니다."); // 여기서부터**************
-			}
-		}
-		System.out.println();
+		
+		
 		
 		// 문제8) 1등학생의 학번과 성적 출력
 		// 정답8) 1004번(98점)
