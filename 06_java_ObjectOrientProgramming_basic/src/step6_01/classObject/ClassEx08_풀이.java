@@ -32,47 +32,52 @@ public class ClassEx08_풀이 {
 		Ex08_풀이 dong = new Ex08_풀이();
 		Scanner scan = new Scanner(System.in);
 		
-		for (int i = 0; i < dong.game.length; i++) {
-			System.out.print(dong.game[i] + " ");
+		while (true) {
+			
+			for (int i = 0; i < dong.game.length; i++) {
+				System.out.print(dong.game[i] + " ");
+			}
+			System.out.println();
+			System.out.print("어디로 갈까요?(1 = 왼쪽으로 가기 / 2 = 오른쪽으로 가기): ");
+			int move = scan.nextInt();
+			
+			for (int i = 0; i < dong.game.length; i++) {
+				if (move == 1) {
+					if (dong.game[i].equals("웃")) {
+						if (!dong.game[i - 1].equals("■")) {
+							dong.game[i] = "_";
+							dong.game[i - 1] = "웃";
+						}
+						else if (dong.game[i - 1].equals("■")) {
+							System.out.print("격파하시려면 3을 입력하세요: ");
+							int punch = scan.nextInt();
+							
+							if (punch == 3) {
+								dong.game[i - 1] = "_";
+							}
+						}
+					}
+				}
+				else if (move == 2) {
+					if (dong.game[i].equals("웃")) {
+						if (!dong.game[i + 1].equals("■")) {
+							dong.game[i] = "_";
+							dong.game[i + 1] = "웃";
+							i = dong.game.length;
+						}
+						else if (dong.game[i + 1].equals("■")) {
+							System.out.print("격파하시려면 3을 입력하세요: ");
+							int punch = scan.nextInt();
+							
+							if (punch == 3) {
+								dong.game[i + 1] = "_";
+							}
+						}
+					}
+				}
+			}
 		}
-		System.out.println();
-		System.out.print("어디로 갈까요?(1 = 왼쪽으로 가기 / 2 = 오른쪽으로 가기): ");
-		int move = scan.nextInt();
 		
-		for (int i = 0; i < dong.game.length; i++) {
-			if (move == 1) {
-				if (dong.game[i].equals("웃")) {
-					if (!dong.game[i - 1].equals("■")) {
-						dong.game[i] = "_";
-						dong.game[i - 1] = "웃";
-					}
-					else if (dong.game[i - 1].equals("■")) {
-						System.out.print("격파하시려면 3을 입력하세요: ");
-						int punch = scan.nextInt();
-						
-						if (punch == 3) {
-							dong.game[i - 1] = "_";
-						}
-					}
-				}
-			}
-			else if (move == 2) {
-				if (dong.game[i].equals("웃")) {
-					if (!dong.game[i + 1].equals("■")) {
-						dong.game[i] = "_";
-						dong.game[i + 1] = "웃";
-					}
-					else if (dong.game[i + 1].equals("■")) {
-						System.out.print("격파하시려면 3을 입력하세요: ");
-						int punch = scan.nextInt();
-						
-						if (punch == 3) {
-							dong.game[i + 1] = "_";
-						}
-					}
-				}
-			}
-		}
 	}
 
 }
