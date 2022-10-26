@@ -1,6 +1,6 @@
 package step6_02.method;
 
-//2022-10-26 오후 5시 33분 ~
+//2022-10-26 오후 5시 33분 ~ 오후 5시 37분
 
 import java.util.Random;
 import java.util.Scanner;
