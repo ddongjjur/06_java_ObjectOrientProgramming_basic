@@ -39,8 +39,23 @@ class MethodType {
 		}
 	}
 	
-	//	입력값이 있고 , 결과값이 있는 경우.
 	//	입력값이 없고 , 결과값이 있는 경우. 
+	double type01() {
+		
+		return 3.141592;
+	}
+	
+	
+	//	입력값이 있고 , 결과값이 있는 경우.
+	 int type11(String birth) {
+		 //19800101
+		 
+		 String temp = birth.substring(0, 4);
+		 
+		 int age = 2022 - Integer.parseInt(temp) + 1;
+		 
+		 return age;
+	 }
 }
 
 public class MethodEx02 {
@@ -70,8 +85,22 @@ public class MethodEx02 {
 		
 		
 		// 입력값이 있고 , 결과값이 있는 경우.
+		System.out.println("파이: " + ex.type01());
+		
+		double pi = ex.type01();
+		System.out.println("파이: " + pi);
+		System.out.println();
 		
 		// 입력값이 없고 , 결과값이 있는 경우. 
+		System.out.println("나이: " + ex.type11("19800101") + "살");
+		
+		int age = ex.type11("19900101");
+		
+		System.out.println("나이: " + age + "살");
+		
+		if (ex.type11("20220101") == 1) {
+			System.out.println("1살 입니다.");
+		}
 		
 	}
 

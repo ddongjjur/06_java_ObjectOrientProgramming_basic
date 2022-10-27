@@ -1,7 +1,5 @@
 package step6_02.method;
 
-import java.util.Scanner;
-
 //2022-10-26 오후 5시 3분 ~ 오후 5시 11분 
 
 class Ex06{
