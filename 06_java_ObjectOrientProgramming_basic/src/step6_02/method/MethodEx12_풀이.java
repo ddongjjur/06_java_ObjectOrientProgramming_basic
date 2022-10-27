@@ -47,10 +47,17 @@ class Ex12 {
 	
 	// 3. 파일의 확장자를 리턴하는 getFileExtention 메서드를 만드시오.
 	String getFileExtention(String fileName) {
-		String[] fileReturn = fileName.split("\\.");
+//		String[] fileReturn = fileName.split("\\.");
+//		
+//		return fileReturn[1];
 		
-		return fileReturn[1];
+		String fileExtention = "";
+		
+		fileExtention = fileName.substring(fileName.length() - 3, fileName.length());
+		return fileExtention;
 		}
+		
+		
 	
 	// 4. 숫자의 제곱을 계산하여 리턴하는 myPow 메서드를 만드시오.
 	int myPow(int param1 , int param2) {
@@ -65,23 +72,70 @@ class Ex12 {
 	
 	// 5. 문자열에 특정 문자의 위치를 리턴하는 myIndexOf 메서드를 만드시오.
 	int myIndexOf(String data , String word) {
+		String[] wordData = new String[data.length()];
+		int result = 0;
 		
-		return 0;
+		for (int i = 0; i < data.length(); i++) {
+			wordData[i] = data.substring(i, i + 1);
+			
+			if (wordData[i].equals(word)) {
+				result = i;
+			}
+		}
+		
+		return result;
 		}
 	
 	// 6. 문자열에 특정 위치의 문자를 리턴하는 myCharAt 메서드를 만드시오.
 	// 문자열을 문자 배열로 저장) > 문자열.toCharArray()
 	// 예시)                      > char[] 변수 = 문자열.toCharArray();
-	char myCharAt(String data , int index) {return '0';}
+	char myCharAt(String data , int index) {
+		
+		char[] word = new char[data.length()];
+		char idxNumber = 0;
+		
+		for (int i = 0; i < word.length; i++) {
+			word[i] = data.charAt(i);
+		}
+			idxNumber = word[index];
+		
+		
+		return idxNumber;
+		}
 	
 	// 7-1. 문자열의 특정위치부터 끝까지의 잘라진 문자열을 리턴하는 mySubString1 메서드를 만드시오.
-	String mySubString1(String data , int startIndex) {return "";}
+	String mySubString1(String data , int startIndex) {
+		String munja = data.substring(startIndex);
+		
+		
+		
+		return munja;
+		}
 	
 	// 7-2. 문자열의 특정위치부터 특정위치까지의 잘라진 문자열을 리턴하는 mySubString2 메서드를 만드시오.
-	String mySubString2(String data , int startIndex , int endIndex) {return "";}
+	String mySubString2(String data , int startIndex , int endIndex) {
+		
+		String munja = data.substring(startIndex, endIndex);
+		
+		return munja;
+		
+	}
 	
 	// 8. 문자열을 특정 키워드로 잘라내어 배열에 담아서 리턴하는 mySplit 메서드를 만드시오.
-	String[] mySplit(String data , String sep) {return null;}
+	String[] mySplit(String data , String sep) {
+		
+		String[] keyword = new String[data.length()];
+		
+		for (int i = 0; i < keyword.length; i++) {
+			if (i != keyword.length - 1) {
+				keyword[i] = data.split(sep) + ", ";
+			}
+			
+		}
+		for (int i = 0; i < keyword.length; i++) {
+			return keyword[i];
+		}
+	}
 	
 }
 
