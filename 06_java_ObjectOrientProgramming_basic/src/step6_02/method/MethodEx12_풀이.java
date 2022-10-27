@@ -47,15 +47,20 @@ class Ex12 {
 	
 	// 3. 파일의 확장자를 리턴하는 getFileExtention 메서드를 만드시오.
 	String getFileExtention(String fileName) {
-		String[] fileReturn = fileName.split(".");
+		String[] fileReturn = fileName.split("\\.");
 		
-		return fileReturn[1]; //여기
+		return fileReturn[1];
 		}
 	
 	// 4. 숫자의 제곱을 계산하여 리턴하는 myPow 메서드를 만드시오.
 	int myPow(int param1 , int param2) {
+		int mul = param1;
 		
-		return 0;
+		for (int i = 0; i < param2 - 1; i++) {
+			mul *= param1;
+		}
+		
+		return mul;
 		}
 	
 	// 5. 문자열에 특정 문자의 위치를 리턴하는 myIndexOf 메서드를 만드시오.
