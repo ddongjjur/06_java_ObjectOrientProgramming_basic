@@ -122,7 +122,7 @@ class Ex12 {
 	}
 	
 	// 8. 문자열을 특정 키워드로 잘라내어 배열에 담아서 리턴하는 mySplit 메서드를 만드시오.
-	String[] mySplit(String data , String sep) {
+	String mySplit(String data , String sep) {
 		
 		String[] keyword = new String[data.length()];
 		
@@ -135,6 +135,7 @@ class Ex12 {
 		for (int i = 0; i < keyword.length; i++) {
 			return keyword[i];
 		}
+		return "";
 	}
 	
 }
@@ -206,10 +207,10 @@ public class MethodEx12_풀이 {
 		System.out.println();
 		
 		// 8. 문자열을 특정 키워드로 잘라내어 배열에 담아서 리턴하는 mySplit 메서드를 만드시오.
-		System.out.println(Arrays.toString(e.mySplit("a,b,c", ",")));		  // [a, b, c]
-		System.out.println(Arrays.toString(e.mySplit("a,b,c,e,f,g", ",")));   // [a, b, c, e, f, g]
-		System.out.println(Arrays.toString(e.mySplit("a/b/c/e/f/g", "/")));   // [a, b, c, e, f, g]
-		System.out.println(Arrays.toString(e.mySplit("goodsCd=1 & goodsNm=스마트 TV & goodsPrice=3000000 & orderQty=1 & ordererId=qwer1234", "&")));  // [goodsCd=1 ,  goodsNm=스마트 TV ,  goodsPrice=3000000 ,  orderQty=1 ,  ordererId=qwer1234]
+		System.out.println(e.mySplit("a,b,c", ","));		  // [a, b, c]
+		System.out.println(e.mySplit("a,b,c,e,f,g", ","));   // [a, b, c, e, f, g]
+		System.out.println(e.mySplit("a/b/c/e/f/g", "/"));   // [a, b, c, e, f, g]
+		System.out.println(e.mySplit("goodsCd=1 & goodsNm=스마트 TV & goodsPrice=3000000 & orderQty=1 & ordererId=qwer1234", "&"));  // [goodsCd=1 ,  goodsNm=스마트 TV ,  goodsPrice=3000000 ,  orderQty=1 ,  ordererId=qwer1234]
 		
 		
 	}
